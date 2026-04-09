@@ -1,0 +1,46 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = 'Portfolio', description = 'Personal portfolio website' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-white text-gray-900 font-sans antialiased">
+    <!-- Nav -->
+    <header class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur border-b border-gray-100">
+      <nav class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+        <a href="/" class="font-semibold text-gray-900 hover:text-gray-600 transition-colors">
+          Alex Pienkowski
+        </a>
+        <ul class="flex gap-6 text-sm text-gray-600">
+          <li><a href="/#projects" class="hover:text-gray-900 transition-colors">Projects</a></li>
+          <li><a href="/#skills" class="hover:text-gray-900 transition-colors">Skills</a></li>
+          <li><a href="/#contact" class="hover:text-gray-900 transition-colors">Contact</a></li>
+          <li><a href="/resume" class="hover:text-gray-900 transition-colors">Resume</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-100 py-8 text-center text-sm text-gray-400">
+      &copy; {new Date().getFullYear()} Alex Pienkowski. All rights reserved.
+    </footer>
+  </body>
+</html>

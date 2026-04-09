@@ -1,0 +1,31 @@
+---
+const name = 'Alex Pienkowski';
+const title = 'Software Engineer';
+const bio = `I build thoughtful, performant software with a focus on clean code and great user experiences.
+  Currently open to new opportunities.`;
+---
+
+<section id="hero" class="min-h-screen flex items-center pt-14">
+  <div class="max-w-5xl mx-auto px-6 py-24">
+    <p class="text-sm font-mono text-gray-400 mb-4 tracking-widest uppercase">Hello, world</p>
+    <h1 class="text-5xl sm:text-6xl font-bold text-gray-900 leading-tight mb-4">
+      Hi, I'm <span class="text-gray-600">{name}</span>.
+    </h1>
+    <p class="text-xl sm:text-2xl text-gray-500 font-medium mb-6">{title}</p>
+    <p class="text-lg text-gray-600 max-w-xl leading-relaxed mb-10">{bio}</p>
+    <div class="flex flex-wrap gap-4">
+      <a
+        href="#projects"
+        class="inline-flex items-center px-6 py-3 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-700 transition-colors"
+      >
+        View My Work
+      </a>
+      <a
+        href="#contact"
+        class="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 text-sm font-medium rounded-lg hover:border-gray-500 transition-colors"
+      >
+        Contact Me
+      </a>
+    </div>
+  </div>
+</section>

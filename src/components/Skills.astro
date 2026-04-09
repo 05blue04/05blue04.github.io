@@ -1,0 +1,42 @@
+---
+const skillGroups = [
+  {
+    category: 'Languages',
+    skills: ['C++', 'C', 'TypeScript', 'JavaScript', 'Go'],
+  },
+  {
+    category: 'Frameworks & Libraries',
+    skills: ['React', 'Node.js', 'Express', 'Bun', 'Tailwind CSS'],
+  },
+  {
+    category: 'Tools & Platforms',
+    skills: ['Git', 'Docker', 'PostgreSQL', 'GDB', 'AWS', 'GCP', 'GitHub Actions', 'Postman', 'Linux'],
+  },
+];
+---
+
+<section id="skills" class="py-24">
+  <div class="max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-gray-900 mb-2">Skills</h2>
+    <p class="text-gray-500 mb-12">Technologies I work with.</p>
+
+    <div class="space-y-10">
+      {
+        skillGroups.map((group) => (
+          <div>
+            <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">
+              {group.category}
+            </h3>
+            <div class="flex flex-wrap gap-3">
+              {group.skills.map((skill) => (
+                <span class="px-4 py-2 bg-gray-100 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-200 transition-colors">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

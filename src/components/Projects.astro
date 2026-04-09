@@ -1,0 +1,81 @@
+---
+const projects = [
+  {
+    name: 'Stratos',
+    description:
+      'Open-source AI-enhanced video processing platform built for Purdue ECE Senior Design. Split across three independent services (frontend, backend, AI). I designed the TypeScript/Bun backend — REST API, FFmpeg pipeline, async job queue, and Whisper transcription integration. Supports slow motion, frame interpolation, and subtitle generation.',
+    tech: ['TypeScript', 'Bun', 'FFmpeg', 'Svelte', 'PostgreSQL', 'Docker', 'GitHub Actions'],
+    github: 'https://github.com/StratosIO/Stratos', // update with real link
+    live: null,
+  },
+  {
+    name: 'Poneglyph API',
+    description:
+      'RESTful API for the One Piece universe built with Go and PostgreSQL. Features OpenAPI 3.0 spec, custom API key authentication, IP-based rate limiting (token bucket), full CRUD for characters, devil fruits, and pirate crews, plus pagination, filtering, and API metrics.',
+    tech: ['Go', 'PostgreSQL', 'OpenAPI 3.0', 'Goose'],
+    github: 'https://github.com/05blue04/Poneglyph', // update with real link
+    live: null,
+  },
+  {
+    name: 'Chess Engine',
+    description:
+      'Complete chess rules implementation in C with a 10×12 mailbox board representation. Covers legal move validation for all pieces, castling, en passant, pawn promotion, check/checkmate/stalemate detection, and FEN string parsing. Rendered with a clean raylib GUI.',
+    tech: ['C', 'raylib', 'Make'],
+    github: 'https://github.com/05blue04/ChessGame', // update with real link
+    live: null,
+  },
+  {
+    name: 'CHIP-8 Emulator',
+    description:
+      'Fully functional emulator for the CHIP-8 virtual machine in C++. Implements the complete instruction set, a virtual CPU with registers, PC, stack, and 4KB memory, a 64×32 sprite renderer with collision detection, the fetch–decode–execute cycle, hex keypad input, and delay/sound timers.',
+    tech: ['C++', 'SDL', 'Low-level systems'],
+    github: 'https://github.com/05blue04/chip8', // update with real link
+    live: null,
+  },
+];
+---
+
+<section id="projects" class="py-24 bg-gray-50">
+  <div class="max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-gray-900 mb-2">Projects</h2>
+    <p class="text-gray-500 mb-12">A selection of things I've built.</p>
+
+    <div class="grid sm:grid-cols-2 gap-6">
+      {
+        projects.map((project) => (
+          <article class="bg-white rounded-xl border border-gray-200 p-6 flex flex-col hover:shadow-md transition-shadow">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">{project.name}</h3>
+            <p class="text-sm text-gray-600 leading-relaxed flex-1 mb-4">{project.description}</p>
+
+            <div class="flex flex-wrap gap-2 mb-5">
+              {project.tech.map((tag) => (
+                <span class="text-xs px-2 py-0.5 bg-gray-100 text-gray-600 rounded-full">{tag}</span>
+              ))}
+            </div>
+
+            <div class="flex gap-4 text-sm font-medium">
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-700 hover:text-gray-900 transition-colors"
+              >
+                GitHub →
+              </a>
+              {project.live && (
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-gray-700 hover:text-gray-900 transition-colors"
+                >
+                  Live →
+                </a>
+              )}
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
