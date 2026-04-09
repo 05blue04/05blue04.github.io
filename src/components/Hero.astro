@@ -8,7 +8,7 @@ const bio = `Software engineer focused on backend systems, distributed infrastru
   <div class="max-w-5xl mx-auto px-6 py-24">
     <p class="text-sm font-mono text-gray-400 mb-4 tracking-widest uppercase">Hello, world</p>
     <h1 class="text-5xl sm:text-6xl font-bold text-gray-900 leading-tight mb-4">
-      Hi, I'm <span class="text-gray-600">{name}</span>.
+      Hi, I'm <span class="iridescent-name">{name}</span>.
     </h1>
     <p class="text-xl sm:text-2xl text-gray-500 font-medium mb-6">{title}</p>
     <p class="text-lg text-gray-600 max-w-xl leading-relaxed mb-10">{bio}</p>
@@ -28,3 +28,27 @@ const bio = `Software engineer focused on backend systems, distributed infrastru
     </div>
   </div>
 </section>
+
+<style>
+  .iridescent-name {
+    background: linear-gradient(
+      90deg,
+      #7dd3fc,
+      #a5f3fc,
+      #bfdbfe,
+      #93c5fd,
+      #7dd3fc
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 4s linear infinite;
+  }
+
+  @keyframes shimmer {
+    to {
+      background-position: 200% center;
+    }
+  }
+</style>
