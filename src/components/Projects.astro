@@ -17,7 +17,15 @@ const projects = [
     live: null,
   },
   {
-    name: 'Chess Engine',
+  name: 'Trustworthy Internal Package Registry',
+  description:
+    'Two-phase ECE 461 project: first built a CLI tool to evaluate npm packages across quality metrics (ramp-up time, correctness, bus factor, maintainer responsiveness, license compatibility) using GitHub API data. Extended it into a cloud-hosted REST API and web UI on AWS for package management — uploads, versioning, and search — with CI/CD via GitHub Actions, STRIDE threat modeling, and high automated test coverage.',
+  tech: ['TypeScript', 'AWS', 'REST API', 'GitHub Actions', 'CI/CD'],
+  github: 'https://github.com/shaanchanchani/461-Project-Phase-2',
+  live: null,
+},
+  {
+    name: 'Chess Game',
     description:
       'Complete chess rules implementation in C with a 10×12 mailbox board representation. Covers legal move validation for all pieces, castling, en passant, pawn promotion, check/checkmate/stalemate detection, and FEN string parsing. Rendered with a clean raylib GUI.',
     tech: ['C', 'raylib', 'Make'],
