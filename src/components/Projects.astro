@@ -4,8 +4,8 @@ const projects = [
     name: 'Stratos',
     description:
       'Open-source AI-enhanced video processing platform built for Purdue ECE Senior Design. Split across three independent services (frontend, backend, AI). I designed the TypeScript/Bun backend — REST API, FFmpeg pipeline, async job queue, and Whisper transcription integration. Supports slow motion, frame interpolation, and subtitle generation.',
-    tech: ['TypeScript', 'Bun', 'FFmpeg', 'Svelte', 'PostgreSQL', 'Docker', 'GitHub Actions'],
-    github: 'https://github.com/StratosIO/Stratos', // update with real link
+    tech: ['TypeScript', 'Bun', 'Bun Test', 'FFmpeg', 'Svelte', 'PostgreSQL', 'Docker', 'GitHub Actions'],
+    github: 'https://github.com/StratosIO/Stratos', 
     live: null,
   },
   {
@@ -13,14 +13,14 @@ const projects = [
     description:
       'RESTful API for the One Piece universe built with Go and PostgreSQL. Features OpenAPI 3.0 spec, custom API key authentication, IP-based rate limiting (token bucket), full CRUD for characters, devil fruits, and pirate crews, plus pagination, filtering, and API metrics.',
     tech: ['Go', 'PostgreSQL', 'OpenAPI 3.0', 'Goose'],
-    github: 'https://github.com/05blue04/Poneglyph', // update with real link
+    github: 'https://github.com/05blue04/Poneglyph', 
     live: null,
   },
   {
   name: 'Trustworthy Internal Package Registry',
   description:
     'Two-phase ECE 461 project: first built a CLI tool to evaluate npm packages across quality metrics (ramp-up time, correctness, bus factor, maintainer responsiveness, license compatibility) using GitHub API data. Extended it into a cloud-hosted REST API and web UI on AWS for package management — uploads, versioning, and search — with CI/CD via GitHub Actions, STRIDE threat modeling, and high automated test coverage.',
-  tech: ['TypeScript', 'AWS', 'REST API', 'GitHub Actions', 'CI/CD'],
+  tech: ['TypeScript', 'AWS', 'Jest', 'REST API', 'GitHub Actions', 'CI/CD'],
   github: 'https://github.com/shaanchanchani/461-Project-Phase-2',
   live: null,
 },
@@ -29,7 +29,7 @@ const projects = [
     description:
       'Complete chess rules implementation in C with a 10×12 mailbox board representation. Covers legal move validation for all pieces, castling, en passant, pawn promotion, check/checkmate/stalemate detection, and FEN string parsing. Rendered with a clean raylib GUI.',
     tech: ['C', 'raylib', 'Make'],
-    github: 'https://github.com/05blue04/ChessGame', // update with real link
+    github: 'https://github.com/05blue04/ChessGame', 
     live: null,
   },
   {
@@ -37,7 +37,7 @@ const projects = [
     description:
       'Fully functional emulator for the CHIP-8 virtual machine in C++. Implements the complete instruction set, a virtual CPU with registers, PC, stack, and 4KB memory, a 64×32 sprite renderer with collision detection, the fetch–decode–execute cycle, hex keypad input, and delay/sound timers.',
     tech: ['C++', 'SDL', 'Low-level systems'],
-    github: 'https://github.com/05blue04/chip8', // update with real link
+    github: 'https://github.com/05blue04/chip8', 
     live: null,
   },
 ];
